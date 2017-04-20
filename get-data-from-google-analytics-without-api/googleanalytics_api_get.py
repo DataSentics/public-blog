@@ -45,8 +45,6 @@ if (r.status_code == 200):
     employee_parsed = json.loads(r.text)
     rows = employee_parsed['rows']
 
-    #emp_data = employee_parsed['employee_details']
-
     # open a file for writing
     file_data = open('output.csv', 'w', newline='')
     # create the csv writer object
@@ -77,4 +75,3 @@ if (r.status_code == 200):
         count += 1
 
     file_data.close()
-
